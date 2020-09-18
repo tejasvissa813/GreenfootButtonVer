@@ -24,7 +24,8 @@ int i;
      * 
      */
     
-    public EricZheng(String f, String l, int r, int s) {
+    public EricZheng(String f, String l, int r, int s, int period) {
+        super(period);
         firstName=f;
         lastName=l;
         myRow=r;
@@ -41,6 +42,7 @@ int i;
      * of the classroom.
      */
     public EricZheng() {
+        super(2);
         firstName="Eric";
         lastName="Zheng";
         myRow=6;

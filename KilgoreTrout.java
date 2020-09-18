@@ -22,7 +22,8 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public KilgoreTrout(String f, String l, int r, int s) {
+    public KilgoreTrout(String f, String l, int r, int s, int period) {
+        super(period);
         firstName=f;
         lastName=l;
         myRow=r;
@@ -39,6 +40,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public KilgoreTrout() {
+        super(2);
         firstName="Kilgore";
         lastName="Trout";
         myRow=1;

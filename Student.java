@@ -10,6 +10,7 @@ public abstract class Student extends Actor
 {
        //Instance variables
        public String firstName;
+       
        public String lastName;
        public int myRow;         // rows start in the front of class (1), and end in the back of class
        public int mySeat;        // seats are left to right, 1-8
@@ -23,10 +24,20 @@ public abstract class Student extends Actor
        public String standingFile; // image used when standing
        public String soundFile; //      firstName.toLowerCase()+lastName.toLowerCase()+".ext"; (.wav or .jpg)
        Classroom clas = (Classroom) getWorld();
+       protected int period;
        
-       public Student (int period) {
-           setPeriod(period);
-       }
+     public Student (int period) {
+         setPeriod(period);
+     }
+       
+     public void setPeriod(int n)
+     {
+         period = n;
+     }
+     
+     public int getPeriod(){
+         return period;
+     }
        
        public void setRow(int r){
            myRow=r;
@@ -73,33 +84,4 @@ public abstract class Student extends Actor
        }
             
      
-}
-class TogglePeriodBtn extends actor{  //2 possible image states for actor are box with 1 and 2
-	protected int currentPeriod;
-	Protected String imageFile;
-	public TogglePeriodButton(){
-	    setLocation(50, 50); //can be any location
-	    currentPeriod = 2;
-	    imageFile = “Period”+currentPeriod+”.jpg”;
-        }
-	public void act(){
-	    if(Greenfoot.mouseClicked(this)){
-	        changePeriod();
-	       }
-	    setImage(imageFile);
-	}
-        public void changePeriod(){
-            if(currentPeriod == 2){
-                    setCurrentPeriod(3);
-               }
-            else setCurrentPeriod(2);
-            imageFile = “Period”+currentPeriod+”.jpg”;
-        }
-        public void getCurrentPeriod(){
-            return currentPeriod;
-        }
-        public void setCurrentPeriod(int newCurrentPeriod){
-            if(newCurrentPeriod == 2 || newCurrentPeriod == 3)
-                currentPeriod = newCurrentPeriod;
-            }
 }

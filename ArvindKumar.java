@@ -21,7 +21,8 @@ public class ArvindKumar extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public ArvindKumar(String f, String l, int r, int s) {
+    public ArvindKumar(String f, String l, int r, int s, int period) {
+        super(period);
         firstName=f;
         lastName=l;
         myRow=r;
@@ -38,6 +39,7 @@ public class ArvindKumar extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public ArvindKumar() {
+        super(3);
         firstName="Arvind";
         lastName="Kumar";
         myRow=1;

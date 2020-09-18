@@ -22,7 +22,8 @@ public class AkhilGiridhar extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public AkhilGiridhar(String f, String l, int r, int s) {
+    public AkhilGiridhar(String f, String l, int r, int s, int period){
+        super(period);
         firstName=f;
         lastName=l;
         myRow=r;
@@ -39,6 +40,7 @@ public class AkhilGiridhar extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public AkhilGiridhar() {
+        super(3);
         firstName="Kilgore";
         lastName="Trout";
         myRow=1;
